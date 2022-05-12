@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "RNgCYxpLZSlKjP9nhAbR9qm9sA3AGN8Qsyp8Yoo6e60=",
+  "Source": "PriestBlogServer",
+  "BasePath": "_content/PriestBlogServer",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

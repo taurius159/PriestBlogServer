@@ -12,6 +12,10 @@ builder.Services.ConfigureIISIntegration();
 
 builder.Services.ConfigureLoggerService();
 
+builder.Services.ConfigureMySqlContext(builder.Configuration);
+
+builder.Services.ConfigureRepositoryWrapper();
+
 builder.Services.AddControllers();
 
 var app = builder.Build();

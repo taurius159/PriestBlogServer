@@ -229,6 +229,10 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "AutoMapper.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "NLog.Extensions.Logging": {
               "target": "Package",
               "version": "[1.7.4, )"
@@ -286,9 +290,6 @@
             "projectReferences": {
               "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Contracts\\Contracts.csproj": {
                 "projectPath": "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Contracts\\Contracts.csproj"
-              },
-              "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Entities\\Entities.csproj"
               }
             }
           }

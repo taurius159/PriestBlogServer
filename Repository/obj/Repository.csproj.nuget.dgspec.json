@@ -148,9 +148,6 @@
             "projectReferences": {
               "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Contracts\\Contracts.csproj": {
                 "projectPath": "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Contracts\\Contracts.csproj"
-              },
-              "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Entities\\Entities.csproj": {
-                "projectPath": "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\Entities\\Entities.csproj"
               }
             }
           }

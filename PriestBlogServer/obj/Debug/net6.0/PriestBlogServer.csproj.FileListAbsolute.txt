@@ -37,3 +37,5 @@ C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0
 C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0\Repository.dll
 C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0\Repository.pdb
 C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0\Entities.pdb
+C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\Taurius\source\repos\PriestBlogServer\PriestBlogServer\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

@@ -1,9 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "pg9wsSBYDnzEgwzPNmyGrj3Q5TFSxioQb2NURdNX8FBAYiNlOEG8jBCpG+p9NhN9L01X19IIYPPi2tDmLLCWuA==",
+  "dgSpecHash": "7q5iRhDL3GX1VFt7QiREafC16CrIaZ2yykIQQ/GyMAdzIr/Wl49C1jJV6cJ9FIXPuSYXOG2dorzeUi6tHZjdAA==",
   "success": true,
   "projectFilePath": "C:\\Users\\Taurius\\source\\repos\\PriestBlogServer\\PriestBlogServer\\PriestBlogServer.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Taurius\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\Taurius\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
+    "C:\\Users\\Taurius\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Taurius\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
     "C:\\Users\\Taurius\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.5\\microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
     "C:\\Users\\Taurius\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.5\\microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",

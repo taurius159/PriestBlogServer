@@ -1,6 +1,7 @@
 ﻿using Contracts;
 using Entities;
 using Entities.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Repository
 {
@@ -9,6 +10,18 @@ namespace Repository
         public AuthorRepository(RepositoryContext repositoryContext)
             : base(repositoryContext)
         {
+        }
+        public IEnumerable<Author> GetAllAuthors()
+        {
+            return FindAll()
+                .OrderBy(ow => ow.Name)
+                .ToList();
+        }
+
+        public Author GetAuthorById(Guid authorId)
+        {
+            return FindByCondition(author => author.Id.Equals(authorId))
+            .FirstOrDefault();
         }
     }
 }

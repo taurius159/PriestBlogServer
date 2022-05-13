@@ -6,7 +6,8 @@ namespace Entities.Models
     [Table("account")]
     public class Article
     {
-        public Guid ArticleId { get; set; }
+        [Column("ArticleId")]
+        public Guid Id { get; set; }
 
         [Required(ErrorMessage = "Description is required")]
         [StringLength(45, ErrorMessage = "Description cannot be longer than 100 characters")]

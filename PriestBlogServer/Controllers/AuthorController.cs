@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Contracts;
 using Entities.DataTransferObjects;
+using Entities.Models;
 using Microsoft.AspNetCore.Mvc;
 
 namespace PriestBlogServer.Controllers
@@ -36,7 +37,7 @@ namespace PriestBlogServer.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
-        [HttpGet("{id}")]
+        [HttpGet("{id}", Name  = "AuthorById")]
         public IActionResult GetAuthorById(Guid id)
         {
             try
@@ -57,6 +58,66 @@ namespace PriestBlogServer.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Something went wrong inside GetAuthorById action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+
+        [HttpPost]
+        public IActionResult CreateAuthor([FromBody] AuthorForCreationDto author)
+        {
+            try
+            {
+                if (author is null)
+                {
+                    _logger.LogError("Author object sent from client is null.");
+                    return BadRequest("Author object is null");
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid author object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+                var authorEntity = _mapper.Map<Author>(author);
+                _repository.Author.CreateAuthor(authorEntity);
+                _repository.Save();
+                var createdAuthor = _mapper.Map<AuthorDto>(authorEntity);
+                return CreatedAtRoute("AuthorById", new { id = createdAuthor.Id }, createdAuthor);
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside CreateAuthor action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
+        [HttpPut("{id}")]
+        public IActionResult UpdateAuthor(Guid id, [FromBody] AuthorForUpdateDto author)
+        {
+            try
+            {
+                if (author is null)
+                {
+                    _logger.LogError("Author object sent from client is null.");
+                    return BadRequest("Author object is null");
+                }
+                if (!ModelState.IsValid)
+                {
+                    _logger.LogError("Invalid author object sent from client.");
+                    return BadRequest("Invalid model object");
+                }
+                var authorEntity = _repository.Author.GetAuthorById(id);
+                if (authorEntity is null)
+                {
+                    _logger.LogError($"Author with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                _mapper.Map(author, authorEntity);
+                _repository.Author.UpdateAuthor(authorEntity);
+                _repository.Save();
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside UpdateAuthor action: {ex.Message}");
                 return StatusCode(500, "Internal server error");
             }
         }

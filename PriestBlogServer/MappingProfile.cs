@@ -10,6 +10,8 @@ namespace PriestBlogServer
         {
             CreateMap<Author, AuthorDto>();
             CreateMap<Article, ArticleDto>();
+            CreateMap<AuthorForCreationDto, Author>();
+            CreateMap<AuthorForUpdateDto, Author>();
         }
     }
 }

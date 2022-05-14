@@ -23,5 +23,14 @@ namespace Repository
             return FindByCondition(author => author.Id.Equals(authorId))
             .FirstOrDefault();
         }
+        public void CreateAuthor(Author author)
+        {
+            Create(author);
+        }
+
+        public void UpdateAuthor(Author author)
+        {
+            Update(author);
+        }
     }
 }

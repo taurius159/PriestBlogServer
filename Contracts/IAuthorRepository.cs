@@ -6,5 +6,7 @@ namespace Contracts
     {
         IEnumerable<Author> GetAllAuthors();
         Author GetAuthorById(Guid authorId);
+        void CreateAuthor(Author author);
+        void UpdateAuthor(Author author);
     }
 }

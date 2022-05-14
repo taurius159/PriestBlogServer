@@ -8,5 +8,6 @@ namespace Contracts
         Author GetAuthorById(Guid authorId);
         void CreateAuthor(Author author);
         void UpdateAuthor(Author author);
+        void DeleteAuthor(Author author);
     }
 }

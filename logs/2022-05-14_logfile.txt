@@ -1,3 +1,5 @@
 2022-05-14 09:38:11.5812 INFO Returned all authors from database.
 2022-05-14 09:54:20.1870 INFO Returned all authors from database.
 2022-05-14 09:54:42.9764 INFO Returned all authors from database.
+2022-05-14 10:11:15.2051 ERROR Something went wrong inside DeleteAuthor action: Table 'mydb.account' doesn't exist
+2022-05-14 10:27:27.3714 INFO Returned all authors from database.

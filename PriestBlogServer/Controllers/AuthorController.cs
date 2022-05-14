@@ -121,5 +121,33 @@ namespace PriestBlogServer.Controllers
                 return StatusCode(500, "Internal server error");
             }
         }
+        [HttpDelete("{id}")]
+        public IActionResult DeleteAuthor(Guid id)
+        {
+            try
+            {
+                var author = _repository.Author.GetAuthorById(id);
+                if (author == null)
+                {
+                    _logger.LogError($"Author with id: {id}, hasn't been found in db.");
+                    return NotFound();
+                }
+                if (_repository.Article.ArticlesByAuthor(id).Any())
+                {
+                    _logger.LogError($"Cannot delete author with id: {id}. It has related articles. Delete those articles first");
+                    return BadRequest("Cannot delete author. It has related articles. Delete those articles first");
+                }
+
+                _repository.Author.DeleteAuthor(author);
+                _repository.Save();
+
+                return NoContent();
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError($"Something went wrong inside DeleteAuthor action: {ex.Message}");
+                return StatusCode(500, "Internal server error");
+            }
+        }
     }
 }

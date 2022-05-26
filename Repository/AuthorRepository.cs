@@ -14,7 +14,7 @@ namespace Repository
         public IEnumerable<Author> GetAllAuthors()
         {
             return FindAll()
-                .OrderBy(ow => ow.Name)
+                .OrderBy(author => author.Name)
                 .ToList();
         }
 

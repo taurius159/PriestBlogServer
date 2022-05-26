@@ -1,0 +1,17 @@
+2022-05-26 08:40:39.4979 ERROR Something went wrong inside GetAllArticles action: Unable to cast object of type 'System.DBNull' to type 'System.String'.
+2022-05-26 08:49:41.2815 ERROR Something went wrong inside GetAllArticles action: Unable to cast object of type 'System.DBNull' to type 'System.String'.
+2022-05-26 09:02:03.8414 ERROR Something went wrong inside GetArticleById action: Unable to cast object of type 'System.DBNull' to type 'System.String'.
+2022-05-26 09:10:29.8403 ERROR Something went wrong inside GetAllArticles action: One of the identified items was in an invalid format.
+2022-05-26 09:18:23.2943 ERROR Something went wrong inside GetAllArticles action: One of the identified items was in an invalid format.
+2022-05-26 09:33:16.4111 INFO Returned all articles from database.
+2022-05-26 12:12:23.8330 INFO Returned all articles from database.
+2022-05-26 12:12:27.5430 ERROR Article with id: 03e91478-5608-4132-a753-d494dafce00b, hasn't been found in db.
+2022-05-26 12:12:37.3143 INFO Returned article with id: b0810bf2-683b-46a4-80c6-49eace161693
+2022-05-26 12:16:47.3572 ERROR Something went wrong inside CreateArticle action: An error occurred while saving the entity changes. See the inner exception for details.
+2022-05-26 12:20:17.4496 ERROR Something went wrong inside CreateArticle action: An error occurred while saving the entity changes. See the inner exception for details.
+2022-05-26 12:20:25.5248 ERROR Something went wrong inside CreateArticle action: An error occurred while saving the entity changes. See the inner exception for details.
+2022-05-26 12:24:46.1042 ERROR Something went wrong inside CreateArticle action: An error occurred while saving the entity changes. See the inner exception for details.
+2022-05-26 12:24:48.6595 ERROR Something went wrong inside CreateArticle action: An error occurred while saving the entity changes. See the inner exception for details.
+2022-05-26 12:26:07.8991 INFO Returned all articles from database.
+2022-05-26 12:27:22.4633 INFO Returned all articles from database.
+2022-05-26 12:28:00.9296 INFO Returned all articles from database.

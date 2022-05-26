@@ -16,5 +16,32 @@ namespace Repository
         {
             return FindByCondition(a => a.AuthorId.Equals(authorId)).ToList();
         }
+
+        public void CreateArticle(Article article)
+        {
+            Create(article);
+        }
+
+        public void DeleteArticle(Article article)
+        {
+            Delete(article);
+        }
+
+        public IEnumerable<Article> GetAllArticles()
+        {
+            return FindAll()
+                .ToList();
+        }
+
+        public Article GetArticleById(Guid articleId)
+        {
+            return FindByCondition(article => article.Id.Equals(articleId))
+           .FirstOrDefault();
+        }
+
+        public void UpdateArticle(Article article)
+        {
+            Update(article); 
+        }
     }
 }

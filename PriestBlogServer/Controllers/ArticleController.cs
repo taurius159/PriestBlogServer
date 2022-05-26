@@ -21,12 +21,12 @@ namespace PriestBlogServer.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        public IActionResult GetAllArticles()
+        public IActionResult GetAllArticles([FromQuery] ArticleParameters articleParameters)
         {
             try
             {
-                var articles = _repository.Article.GetAllArticles();
-                _logger.LogInfo($"Returned all articles from database.");
+                var articles = _repository.Article.GetArticles(articleParameters);
+                _logger.LogInfo($"Returned {articles.Count()} articles from database.");
 
                 var articlesResult = _mapper.Map<IEnumerable<ArticleDto>>(articles);
                 return Ok(articlesResult);

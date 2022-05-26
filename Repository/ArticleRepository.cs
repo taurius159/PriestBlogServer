@@ -27,9 +27,11 @@ namespace Repository
             Delete(article);
         }
 
-        public IEnumerable<Article> GetAllArticles()
+        public IEnumerable<Article> GetArticles(ArticleParameters articleParameters)
         {
             return FindAll()
+                .Skip((articleParameters.PageNumber - 1) * articleParameters.PageSize)
+                .Take(articleParameters.PageSize)
                 .ToList();
         }
 

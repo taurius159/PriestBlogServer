@@ -11,10 +11,12 @@ namespace Repository
             : base(repositoryContext)
         {
         }
-        public IEnumerable<Author> GetAllAuthors()
+        public IEnumerable<Author> GetAuthors(AuthorParameters authorParameters)
         {
             return FindAll()
                 .OrderBy(author => author.Name)
+                .Skip((authorParameters.PageNumber - 1) * authorParameters.PageSize)
+                .Take(authorParameters.PageSize)
                 .ToList();
         }
 

@@ -21,12 +21,12 @@ namespace PriestBlogServer.Controllers
             _mapper = mapper;
         }
         [HttpGet]
-        public IActionResult GetAllAuthors()
+        public IActionResult GetAllAuthors([FromQuery] AuthorParameters authorParameters)
         {
             try
             {
-                var authors = _repository.Author.GetAllAuthors();
-                _logger.LogInfo($"Returned all authors from database.");
+                var authors = _repository.Author.GetAuthors(authorParameters);
+                _logger.LogInfo($"Returned  {authors.Count()} authors from database.");
 
                 var authorsResult = _mapper.Map<IEnumerable<AuthorDto>>(authors);
                 return Ok(authorsResult);

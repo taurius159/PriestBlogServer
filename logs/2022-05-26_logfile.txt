@@ -15,3 +15,10 @@
 2022-05-26 12:26:07.8991 INFO Returned all articles from database.
 2022-05-26 12:27:22.4633 INFO Returned all articles from database.
 2022-05-26 12:28:00.9296 INFO Returned all articles from database.
+2022-05-26 12:47:37.5062 INFO Returned  0 authors from database.
+2022-05-26 12:47:51.1116 INFO Returned 0 articles from database.
+2022-05-26 12:47:56.1257 INFO Returned 1 articles from database.
+2022-05-26 12:47:59.2012 INFO Returned 1 articles from database.
+2022-05-26 12:48:03.8071 INFO Returned 0 articles from database.
+2022-05-26 12:48:10.6295 INFO Returned  2 authors from database.
+2022-05-26 12:48:14.8996 INFO Returned  1 authors from database.
